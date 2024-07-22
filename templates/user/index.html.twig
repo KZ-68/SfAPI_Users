@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello ApiController!{% endblock %}
+{% block title %}Users List{% endblock %}
 
 {% block body %}
 <h1>Users</h1>
@@ -22,7 +22,7 @@
                 <div>
                     <i class="ri-map-pin-2-line"></i>&nbsp;{{ user.location.street.number }} 
                     {{ user.location.street.name }} <br>
-                    <p>{{ user.location.postcode }} {{ user.location.city }} </p>
+                    <p>{{ user.location.postcode }} {{ user.location.city }}</p>
                     <p>{{ user.location.country }}</p>
                 </div>
             </div>
