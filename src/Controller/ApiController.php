@@ -23,7 +23,6 @@ class ApiController extends AbstractController
 
     #[Route('/users/add-membre/', name: 'membre_add', methods:'POST')]
     public function addMembre(EntityManagerInterface $entityManager, Request $request, Membre $membre = null) {
-        
         $membre = new Membre();
 
         $title = filter_input(INPUT_POST, 'title', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
@@ -38,14 +37,13 @@ class ApiController extends AbstractController
         $city = filter_input(INPUT_POST, 'city', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
         $country = filter_input(INPUT_POST, 'country', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
-        if ($title && $last && $first && $email && $phone && $picture && $streetnumber && $streetname && $postcode && $city && $country) {
-            
+        if($title && $last && $first && $email && $phone && $picture && $streetnumber && $streetname && $postcode && $city && $country) {
             $membre->setTitle($title);
             $membre->setLast($last);
             $membre->setFirst($first);
             $membre->setEmail($email);
             $membre->setPhone($phone);
-            $membre->setPhone($picture);
+            $membre->setPicture($picture);
             $membre->setStreetnumber($streetnumber);
             $membre->setStreetname($streetname);
             $membre->setPostcode($postcode);

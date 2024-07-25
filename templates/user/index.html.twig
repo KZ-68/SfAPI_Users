@@ -42,11 +42,11 @@
                     <input type="hidden" name="postcode" value="{{ user.location.postcode }}">
                     <input type="hidden" name="city" value="{{ user.location.city }}">
                     <input type="hidden" name="country" value="{{ user.location.country }}">
-                    <input type="hidden" name="uuid" value="user.login.uuid">
+                    <input type="hidden" name="uuid" value="{{user.login.uuid}}">
+                    <button type="submit">
+                        <i class="ri-folder-add-line plus"></i>
+                    </button>
                 </form>
-                <button type="submit">
-                    <i class="ri-folder-add-line plus"></i>
-                </button>
             </div>
         </div>
     {% endfor %}
