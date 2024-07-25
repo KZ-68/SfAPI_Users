@@ -8,7 +8,7 @@ framework:
 
     #esi: true
     #fragments: true
-    http-client:
+    http_client:
         scoped_clients:
             jph:
                 base_uri: https://randomuser.me/api/
